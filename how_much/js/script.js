@@ -1,18 +1,39 @@
 
-// Спросить сумму наличных
+// Переменные
 
-const totalCash = +prompt("Сумма наличных");
+const myBtn = document.querySelector(".btn");
+const myHeader = document.querySelector("h1");
 
-// Спросить кол-во часов и сережек
+// Функция для рассчета
 
-const watchesCount = +prompt("Кол-во золотых часов");
-const earringsCount = +prompt("Кол-во сережек с бриллиантами");
+const haveEnough = () => {
+	let message;
+	const totalCash = +prompt("Сумма наличных");
 
-// Спросить стоимость часов и сережек
+	// Спрашиваем кол-во часов и сережек
 
-const watchesSum = +prompt("Стоимость одних золотых часов") * watchesCount;
-const earringsSum = +prompt("Стоимость одной пары сережек с бриллиантами") * earringsCount;
+	const watchesCount = +prompt("Кол-во золотых часов");
+	const earringsCount = +prompt("Кол-во сережек с бриллиантами");
 
-//Вывод
+	// Спрашиваем стоимость часов и сережек
 
-document.body.innerHTML = "<h1>" + String(watchesSum + earringsSum <= totalCash) + "</h1>";
+	const watchesSum = +prompt("Стоимость одних золотых часов") * watchesCount;
+	const earringsSum = +prompt("Стоимость одной пары сережек с бриллиантами") * earringsCount;
+
+	// Сравниваем суммы
+
+	if(watchesSum + earringsSum <= totalCash){
+		message = "Enough $$$";
+	} else{
+		message = "Not enough $$$!";
+	}
+
+	// Выводим сообщение
+
+	myHeader.innerHTML = String(message);
+	myBtn.innerHTML = "Calculate again";
+};
+
+// Нажатие на кнопку запускает функцию рассчета
+
+myBtn.addEventListener("click", haveEnough);
