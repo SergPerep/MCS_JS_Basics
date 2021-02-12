@@ -19,31 +19,14 @@ const computerWins = "Computer wins";
 
 if (player == computer) /* Checking for a tie */ {
   message = tie;
-} else{
-
-	/* Checking for other combinations */
-
-	switch(player){
-		/* Player: rock */
-		case 0: 
-		if(computer == 1) /* computer: scissors */ {
-			message = playerWins;
-		} else message = computerWins; /* computer: paper */
-		break;
-		/* Player: scissors */
-		case 1:
-		if (computer == 0) /* computer: rock */{
-			message = computerWins;
-		} else message = playerWins; /* computer: paper */
-		break;
-		/* Player: paper */
-		case 2: 
-		if (computer == 1) /* computer: scissors */ {
-			message = computerWins;
-		} else message = playerWins; /* computer: paper */
-		break;
-	}
-}
+} else if (
+	/* Checking for player wins */
+	player == 0 /* Player: rock */ && computer == 1 /* Сomputer: scissors */ ||
+	player == 1 /* Player: scissors */ && computer == 2 /* Сomputer: paper */ ||
+	player == 2 /* Player: paper */ && computer == 0 /* Сomputer: rock */
+	){ 
+	message = playerWins;
+} else message = computerWins;
 
 /* Output message */
 
