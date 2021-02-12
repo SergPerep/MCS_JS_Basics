@@ -1,13 +1,7 @@
+/* Такую функцию нельзя вызвать до ее декларирования*/
 
+const myBtn = document.querySelector("button");
 
-var a = "First";
-
-
-function lava() {
-	a = "Second";
-	console.log(a);
-}
-
-lava();
-
-console.log(a);
+myBtn.addEventListener("click", () => {
+	console.log(this);
+});
