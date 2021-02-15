@@ -1,7 +1,4 @@
-/* Такую функцию нельзя вызвать до ее декларирования*/
+let myArr = [4, 5, 6];
 
-const myBtn = document.querySelector("button");
+myArr.forEach(x => console.log(x*x)); 
 
-myBtn.addEventListener("click", () => {
-	console.log(this);
-});
