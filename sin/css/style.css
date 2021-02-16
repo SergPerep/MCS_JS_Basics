@@ -1,0 +1,135 @@
+/* Default browser styles reset*/
+
+* {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h6, h6{
+	font-size: inherit;
+	font-weight: normal;
+}
+
+
+/* Box-sizing reset method*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Lists reset*/
+
+ul {
+	padding-left: 0;
+}
+
+ul > li{
+	list-style: none;
+}
+
+/* Links style reset */
+
+a{
+	text-decoration: none;
+}
+
+/* Adaptive font-size for rem */
+
+html{
+	font-size: 62.5%; /* 10px / 16px */
+}
+
+
+/* ------------------ Reset end -----------------  */
+
+/* Variables */
+
+:root{
+	--c-lgray: #e9e9e9;
+	--c-black_60: rgba(0, 0, 0, .6);
+	--c-black_30: rgba(0, 0, 0, .3);
+	--c-black_12: rgba(0, 0, 0, .12);
+}
+
+/* ------------------ Variables end -----------------  */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body{
+	font-family: Space Mono, sans-serif;
+	background-color: blue;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main{
+	width: 440px;
+	border-radius: 12px;
+	background-color: white;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	padding: 36px;
+}
+
+input[type = "number"]{
+	font-size: 16px;
+	padding: 16px;
+	border: none;
+	background-color: var(--c-lgray);
+	border: 2px solid var(--c-black_12);
+	border-radius: 8px;
+	margin-bottom: 24px;
+	transition: border .2s ease-in;
+}
+
+input[type = "number"]:focus{
+	border: 2px solid blue;
+	outline: none;
+}
+
+label, .result-title{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 12px;
+	display: bold;
+	color: var(--c-black_30);
+}
+
+h1{
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.submitBtn{
+	background-color: blue;
+	padding: 16px;
+	border-radius: 8px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	width: 140px;
+}
+
+.submitBtn:focused{	
+	outline: none;
+}
+
+.result{
+	border-top: 1px solid var(--c-black_12);
+	padding: 36px;
+}
+
+.result-answer{
+	font-size: 24px;
+	font-weight: bold;
+}
