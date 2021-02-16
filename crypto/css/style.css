@@ -1,0 +1,98 @@
+/* Default browser styles reset*/
+
+* {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h6, h6{
+	font-size: inherit;
+	font-weight: normal;
+}
+
+
+/* Box-sizing reset method*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Lists reset*/
+
+ul {
+	padding-left: 0;
+}
+
+ul > li{
+	list-style: none;
+}
+
+/* Links style reset */
+
+a{
+	text-decoration: none;
+}
+
+/* Adaptive font-size for rem */
+
+html{
+	font-size: 62.5%; /* 10px / 16px */
+}
+
+
+/* ------------------ Reset end -----------------  */
+
+/* Variables */
+
+:root{
+	--c-red: #D50022;
+	--c-blue: #4392DC;
+	--c-green: #3AE3C4;
+	
+}
+
+/* ------------------ Variables end -----------------  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body{
+	font-family: Space Mono, sans-serif;
+	padding: 16px;
+	font-size: 24px;
+}
+
+h1{
+	font-size: 72px;
+}
+.curr{
+ margin-top: 24px;
+}
+
+.curr-title{
+	font-weight: bold;
+}
+
+.curr-price{
+
+}
+
+.curr-diagram{
+	height: 24px;
+	background-color: gray;
+}
+
+.curr:nth-child(1) .curr-diagram{
+	background-color: var(--c-red);
+}
+
+.curr:nth-child(2) .curr-diagram{
+	background-color: var(--c-blue);
+}
+
+.curr:nth-child(3) .curr-diagram{
+	background-color: var(--c-green);
+}
