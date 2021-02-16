@@ -53,6 +53,25 @@ html{
 
 /* ------------------ Variables end -----------------  */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body{
+	font-family: Space Mono, sans-serif;
+	font-size: 88px;
+	background-color: blue;
+	padding: 16px;
+}
+
+.main{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.display-item{
+	margin-right: 24px;
+	text-align: center;
+	color: white;
+}
 
 
 
