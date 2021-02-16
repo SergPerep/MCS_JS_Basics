@@ -1,0 +1,14 @@
+const ZOO = [
+	{
+		"name": "tiger",
+		"age": 7 
+	},
+	{
+		"name": "parrot",
+		"age": 1
+	},
+	{
+		"name": "owl",
+		"age": 3
+	}
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Weather</title>
+	<meta charset="utf-8">
+	<meta description="boilerplate code">
+	<meta keywords="boilerplate, test">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<main>
+		<h1>Weather</h1>
+		<form class="weather-form">
+			<label for="city">Location</label>
+			<div class="form-container">
+			<input class="city-input" type="text" name="city" placeholder="Moscow">
+			<input class="submit-btn" type="submit" name="submit" value="Get">
+			</div>
+		</form>
+		<div class="result result-hidden">
+			<div class="result-item">
+				<div class="result-item-title">Location</div>
+				<div class="result-item-desc result-city">Moscow</div>
+			</div>
+			<div class="result-item">
+				<div class="result-item-title">Temperature</div>
+				<div class="result-item-desc result-temp">-22</div>
+			</div>
+			<div class="result-item">
+				<div class="result-item-title">Wind speed</div>
+				<div class="result-item-desc result-wind">65</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>
