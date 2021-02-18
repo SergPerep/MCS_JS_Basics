@@ -1,24 +1,34 @@
-const APIKey = "fa3c86c94cc1ed9a7368b88024ce92db";
-const city = "Houten";
-const url = "http://api.openweathermap.org/data/2.5/find?q=" + city + "&units=metric&appid=" + APIKey;
-
-// Запрос
-
-let xhr = new XMLHttpRequest();
-
-// Настройка запроса
-
-xhr.open('GET', url, false);
-
-// Отправка запроса
-
-xhr.send();
-
-// Получение строки
-
-if(xhr.status !== 200){
-	console.log(xhr.status + " " + xhr.statusText);
-} else{
-	console.log(xhr.responseText);
+// Создаем класс-фабрику по 
+// производству демонов
+class Demon{
+	constructor(name){
+		this.name = name;
+		this.head = "horns";
+	}
+	basicAction(){
+		console.log(this.name + " is cursing you");
+	}
 }
 
+// Создаем класс-фабрику по
+// производству ангелов на основе
+// класса Demon
+class Angel extends Demon{
+	constructor(head){
+		super(head);
+		this.head = "halo";
+		this.wings = true;
+	}
+	sings(){
+		console.log("Sings a holy hymn!");
+	}
+	basicAction(){
+		console.log(this.name + " is blessing you");
+	}
+}
+
+// Производим демона
+let Amon = new Demon("Amon");
+
+// Производим ангела
+let Gabriel = new Angel("Gapriel");
