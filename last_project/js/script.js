@@ -47,14 +47,15 @@ window.onload = () => {
 	xhr.send();
 
 	// Получение строки
+	let jsonWeather;
 	if(xhr.status !== 200){
 		console.log(xhr.status + " " + xhr.statusText);
 	} else{
-		var WEATHER = JSON.parse(xhr.responseText);
+		jsonWeather = JSON.parse(xhr.responseText);
 	}
 
 	// Получаем температуру
-	const tempWeather = WEATHER.main.temp;
+	const tempWeather = jsonWeather.main.temp;
 	
 	//*************************
 	//**** Работа с формой ****

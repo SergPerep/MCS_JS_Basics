@@ -9,7 +9,7 @@ class Tiger{
 }
 
 // Создаем класс злого тигра
-class angryTiger extends Tiger{
+class AngryTiger extends Tiger{
 	throwDart(){
 		console.log(this.name + ": «ZzZzzZzZz»");
 	}
@@ -17,7 +17,7 @@ class angryTiger extends Tiger{
 
 // Создаем тигров
 let shrimpTheTiger = new Tiger("Shrimp");
-let satanTheTiger = new angryTiger("Satan");
+let satanTheTiger = new AngryTiger("Satan");
 
 // Проверяем методы
 shrimpTheTiger.feedCat();
